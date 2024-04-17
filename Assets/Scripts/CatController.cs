@@ -72,6 +72,7 @@ public class CatController : MonoBehaviour
             if (characterPosition == PositionState.Center)
             {
                 characterPosition = PositionState.Right;
+                characterPosition = transform.DOLocalRotate(new Vector3(90, 0), 1f, RotateMode.Fast);
                 targetPos = centerPos + (Vector3.right * horizontalMovementDelta);
             }
             else if (characterPosition == PositionState.Left)
